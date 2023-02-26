@@ -3,10 +3,163 @@
   box-sizing: inherit;
 }
 
+:root{
+  --col-grey: hsl(0, 0%, 41%);
+  --col-dark: hsl(0, 0%, 8%);
+}
+
 html {
   box-sizing: border-box;
 }
 
-p, a, li{
+p, a, li, h1, h2{
   font-size: 16px;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+}
+
+/* ESTILOS TAMAÑOS */
+.container{
+  width: min(95%, 1350px);
+  margin: 0 auto;
+}
+
+/* FLEXBOX */
+.flex{
+  display: flex;
+}
+
+.f-auto{
+  flex: 1;
+}
+
+.s-between{
+  justify-content: space-between;
+}
+
+.col-center{
+  align-items: center;
+}
+
+.col-gap-1{
+  column-gap: 5px;
+}
+
+.col-gap-2{
+  column-gap: 10px;
+}
+
+.col-gap-3{
+  column-gap: 20px;
+}
+
+.col-gap-5{
+  column-gap: 50px;
+}
+
+/* PADDING */
+.p-1{
+  padding: 5px;
+}
+
+.p-2{
+  padding: 10px;
+}
+
+.p-3{
+  padding: 15px;
+}
+
+.p-4{
+  padding: 20px;
+}
+
+.pl-1{
+  padding-left: 5px;
+}
+
+.pl-5{
+  padding-left: 25px
+}
+
+.py-1{
+  padding: 4px 0 4px 0;
+}
+
+.py-3{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.px-2{
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+
+.px-5{
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+/* LETRAS ESTILOS */
+.bold{
+  font-weight: bold;
+}
+
+/* TAMAÑOS LETRAS */
+.size-1{
+  font-size: 18px;
+}
+
+.size-2{
+  font-size: 21px;
+}
+
+.size-3{
+  font-size: 24px;
+}
+
+.size-4{
+  font-size: 26px;
+}
+
+.size-5{
+  font-size: 30px;
+}
+
+.size-6{
+  font-size: 36px;
+}
+
+/* COLORES */
+.col-grey{
+  color: var(--col-grey);
+}
+
+.col-dark{
+  color: var(--col-dark)
+}
+
+/* ESTILOS */
+.pointer{
+  cursor: pointer;
+}
+
+.rotate{
+  transform: rotate(180deg);
+}
+
+.transition{
+  transition: .3s all ease;
+}
+
+/* BORDERS */
+.border-grey{
+  border: 1px solid var(--col-grey);
+  border-radius: 10px;
+}
+
+.border-dark{
+  border: 1px solid var(--col-dark);
+  border-radius: 10px;
 }

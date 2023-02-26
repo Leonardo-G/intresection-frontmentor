@@ -1,10 +1,9 @@
-import { NavBar } from "@/components/NavBar/NavBar";
-import { Box } from '@mui/material'
+import { NavBar } from "@/components/nav/NavBar";
 
 export default function Home() {
     return (
-        <Box>
+        <>
             <NavBar />
-        </Box>
+        </>
     )
 }
