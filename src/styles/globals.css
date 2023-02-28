@@ -101,6 +101,19 @@ p, a, li, h1, h2{
   padding-right: 18px;
 }
 
+/* MARGIN */
+.mt-1{
+  margin-top: 5px;
+}
+
+.mt-2{
+  margin-top: 10px;
+}
+
+.mt-3{
+  margin-top: 15px;
+}
+
 /* LETRAS ESTILOS */
 .bold{
   font-weight: bold;
@@ -162,4 +175,8 @@ p, a, li, h1, h2{
 .border-dark{
   border: 1px solid var(--col-dark);
   border-radius: 10px;
+}
+
+.relative{
+  position: relative;
 }
