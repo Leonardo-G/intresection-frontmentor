@@ -12,16 +12,28 @@ html {
   box-sizing: border-box;
 }
 
-p, a, li, h1, h2{
+p, a, li, h1, h2, button{
   font-size: 16px;
   font-family: "Epilogue", sans-serif;
   font-weight: 500;
+}
+
+p{
+  line-height: 1.5;
 }
 
 /* ESTILOS TAMAÑOS */
 .container{
   width: min(95%, 1350px);
   margin: 0 auto;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.width80{
+  width: 80%;
 }
 
 /* FLEXBOX */
@@ -114,12 +126,21 @@ p, a, li, h1, h2{
   margin-top: 15px;
 }
 
+.mt-5{
+  margin-top: 25px;
+}
+
 /* LETRAS ESTILOS */
 .bold{
   font-weight: bold;
 }
 
 /* TAMAÑOS LETRAS */
+.h1{
+  font-size: 100px;
+  font-weight: 700;
+}
+
 .size-1{
   font-size: 18px;
 }
@@ -179,4 +200,31 @@ p, a, li, h1, h2{
 
 .relative{
   position: relative;
+}
+
+/* BUTTONS */
+.btn{
+  outline: none;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1px solid var(--col-dark);
+  transition: .3s all ease;
+}
+
+.btn-dark{
+  background-color: var(--col-dark);
+  color: #fff;
+}
+
+.btn-transparent{
+  background: transparent;
+  color: #000;
+}
+
+.btn-hover-transparent:hover{
+  background: transparent;
+  color: #000;
+  transition: .3s all ease;
 }
