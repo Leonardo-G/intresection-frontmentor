@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import style from "./LinkNav.module.css";
 import { faBell, faCalendar, faCalendarDays, faClockFour } from '@fortawesome/free-solid-svg-icons';
+import { links } from 'database/links';
 
 interface Props {
     title: string;
@@ -17,6 +18,7 @@ export const LinkNav: FC<Props> = ({ icon, title, border }) => {
     //Vamos agregar una clase de css en caso de no estar HOVER. 
     //en caso de estar en HOVER se le cambiara;
     const [isHover, setIsHover] = useState(false);
+    const [modalLinksState, setModalLinksState] = useState(links.filter( l => l.title === title )[0]);
 
     if ( icon ){
         return (
@@ -32,37 +34,31 @@ export const LinkNav: FC<Props> = ({ icon, title, border }) => {
                     className={`transition ${ isHover ? "rotate" : "" } ${ isHover ? "col-dark" : "col-grey" } `}
                 />
                 {
-                    isHover &&
-                    <div className={` ${style.modalNav}`}>
-                        <div className='flex col-gap-3'>
-                            <FontAwesomeIcon 
-                                icon={ faCalendarDays }
-                                color="#3f51b5"
-                            />
-                            <p>Todo List</p>
+                    isHover && modalLinksState.modalLinks?.find( m => m.icon ) 
+                    ?
+                        <div className={` ${style.modalNav}`}>
+                            {
+                                modalLinksState.modalLinks.map( (m, idx) => (
+                                    <div key={ m.title } className={`flex col-gap-3 ${ idx !== 0 ? "mt-3" : "" }`}>
+                                        <FontAwesomeIcon 
+                                            icon={ m.icon! }
+                                            color={ m.color }
+                                        />
+                                        <p>{ m.title }</p>
+                                    </div>
+                                ))
+                            }
                         </div>
-                        <div className='flex col-gap-3 mt-3'>
-                            <FontAwesomeIcon 
-                                icon={ faCalendar }
-                                color="#03a9f4"
-                            />
-                            <p>Calendar</p>
+                    : isHover && modalLinksState.modalLinks &&
+                        <div className={` ${style.modalNav}`}>
+                            {
+                                modalLinksState.modalLinks.map( (m, idx )=> (
+                                    <div key={ m.title } className={`flex col-gap-3 ${ idx !== 0 ? "mt-3" : "" }`}>
+                                        <p>{ m.title }</p>
+                                    </div>
+                                ))
+                            }
                         </div>
-                        <div className='flex col-gap-3 mt-3'>
-                            <FontAwesomeIcon 
-                                icon={ faBell }
-                                color="#cddc39"
-                            />
-                            <p>Reminders</p>
-                        </div>
-                        <div className='flex col-gap-3 mt-3'>
-                            <FontAwesomeIcon 
-                                icon={ faClockFour }
-                                color="hsl(266deg 75% 44%)"
-                            />
-                            <p>Planning</p>
-                        </div>
-                    </div>
                 } 
             </div>
         ) 
