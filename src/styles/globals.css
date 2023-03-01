@@ -6,6 +6,12 @@
 :root{
   --col-grey: hsl(0, 0%, 41%);
   --col-dark: hsl(0, 0%, 8%);
+  
+/* xxl 1080 xl 920 xm 720 xs 480 */
+  --xxlViewport: 1080px;
+  --xlViewport: 920px;
+  --xmViewport: 720px;
+  --xsViewport: 480px;
 }
 
 html {
@@ -21,6 +27,7 @@ p, a, li, h1, h2, button{
 p{
   line-height: 1.5;
 }
+
 
 /* ESTILOS TAMAÑOS */
 .container{
@@ -39,6 +46,10 @@ p{
 /* FLEXBOX */
 .flex{
   display: flex;
+}
+
+.f-column{
+  flex-direction: column;
 }
 
 .f-auto{
@@ -135,6 +146,14 @@ p{
   font-weight: bold;
 }
 
+.txt-right{
+  text-align: right;
+}
+
+.txt-center{
+  text-align: center;
+}
+
 /* TAMAÑOS LETRAS */
 .h1{
   font-size: 100px;
@@ -227,4 +246,20 @@ p{
   background: transparent;
   color: #000;
   transition: .3s all ease;
+}
+
+/* DISPLAY */
+
+.d-none{
+  display: none;
+}
+
+@media ( max-width: 920px ) {
+  .d-none-xl{
+    display: none;
+  }
+
+  .d-visible-xl{
+    display: inherit
+  }
 }
