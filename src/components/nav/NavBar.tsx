@@ -47,6 +47,12 @@ export const NavBar = () => {
                     />
                 </div>
             </nav>
+            {
+                openNav &&
+                <div className={ style.background }>
+                </div>
+            }
+                
             <div className={` ${ style['nav-responsive'] } ${ openNav ? style['nav-responsive-open'] : ""} `}>
                 <div 
                     className='txt-right pointer'
