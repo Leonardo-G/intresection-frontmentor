@@ -28,6 +28,11 @@ p{
   line-height: 1.5;
 }
 
+@media ( max-width: 480px ) {
+  p, a, li, h1, h2, button{
+    font-size: 14px;
+  }
+}
 
 /* ESTILOS TAMAÑOS */
 .container{
@@ -41,6 +46,16 @@ p{
 
 .width80{
   width: 80%;
+}
+
+.width100{
+  width: 100%;
+}
+
+@media ( max-width: 720px ) {
+  .width80{
+    width: 100%;
+  }
 }
 
 /* FLEXBOX */
@@ -64,6 +79,10 @@ p{
   align-items: center;
 }
 
+.jus-center{
+  justify-content: center;
+}
+
 .col-gap-1{
   column-gap: 5px;
 }
@@ -78,6 +97,20 @@ p{
 
 .col-gap-5{
   column-gap: 50px;
+}
+
+@media ( max-width: 720px ) {
+  .f-column-rev-xl{
+    flex-direction: column-reverse ;
+  }
+
+  .f-auto-xl{
+    flex: none;
+  }
+
+  .jus-center-xl{
+    justify-content: center;
+  }
 }
 
 /* PADDING */
@@ -154,10 +187,20 @@ p{
   text-align: center;
 }
 
+@media ( max-width: 720px ) {
+  .txt-center-xl{
+    text-align: center;
+  }
+}
+
 /* TAMAÑOS LETRAS */
 .h1{
   font-size: 100px;
   font-weight: 700;
+}
+
+.size-auto{
+  font-size: 16px;
 }
 
 .size-1{
@@ -182,6 +225,22 @@ p{
 
 .size-6{
   font-size: 36px;
+}
+
+@media ( max-width: 720px ) {
+  .h1{
+    font-size: 50px;
+  }
+}
+
+@media ( max-width: 480px ) {
+  .h1{
+    font-size: 30px;
+  }
+
+  .size-auto-xs{
+    font-size: 14px;
+  }
 }
 
 /* COLORES */
