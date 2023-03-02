@@ -5,7 +5,18 @@
     flex: 1;
 }
 
-@media ( max-width: 720px ) {
+.container-image img{
+    height: 100%;
+    width: 100%;
+}
+
+.container-image-brand{
+    position: relative;
+    height: 30px;
+    flex: 1;
+}
+
+@media ( max-width: 780px ) {
     .container-image{
         flex: none;
         height: 500px;
@@ -15,6 +26,6 @@
 @media ( max-width: 480px ) {
     .container-image{
         flex: none;
-        height: 400px;
+        height: 300px;
     }
 }
